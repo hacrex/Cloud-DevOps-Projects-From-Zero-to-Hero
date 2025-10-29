@@ -331,17 +331,11 @@ Disaster recovery setup for your 3-tier app
 **Ashvit K.**
 Cloud & DevOps Engineer | Automation & Security Enthusiast
 
-📧 [LinkedIn](https://linkedin.com/in/ashvitk)
+📧 [LinkedIn](https://www.linkedin.com/in/opswork/)
 🌎 Portfolio – Coming Soon
 
 ---
 
 ⭐ *If you find this repository helpful, please consider starring it to support my work!*
 
-```
-
----
-
-Would you like me to generate **AWS architecture diagram images (PNG or SVG)** for all 10 projects next (matching this README structure)?  
-They’ll visually align with the text diagrams and can be stored in `/assets/architecture/`.
 ```
