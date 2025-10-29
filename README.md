@@ -1,312 +1,288 @@
-# ☁️ Cloud & DevOps Projects – From Zero to Hero
+# ☁️ Multi-Cloud DevOps Projects – From Zero to Hero
 
-Welcome to my collection of **end-to-end Cloud & DevOps projects** built on **AWS**, **Terraform**, **Kubernetes**, and **CI/CD automation**.
+Welcome to my collection of **end-to-end Cloud & DevOps projects** built across **AWS**, **Google Cloud Platform (GCP)**, **Microsoft Azure**, **Terraform**, **Kubernetes**, and **CI/CD automation**.
 
-Each project is designed to simulate **real-world cloud infrastructure**, evolving step-by-step from basic serverless hosting to multi-region disaster recovery.  
-This repository demonstrates expertise across **Infrastructure as Code (IaC)**, **Containers**, **GitOps**, **Monitoring**, and **Security**.
+Each project is designed to simulate **real-world cloud infrastructure** with implementations for all three major cloud providers, evolving step-by-step from basic serverless hosting to multi-region disaster recovery.  
+This repository demonstrates expertise across **Infrastructure as Code (IaC)**, **Containers**, **GitOps**, **Monitoring**, and **Security** in a **multi-cloud environment**.
 
 ---
 
 ## 📚 Table of Contents
-1. [Project 1: Serverless Static Website](#1-serverless-static-website)
-2. [Project 2: The Classic 3-Tier Web Application](#2-the-classic-3-tier-web-application)
-3. [Project 3: Automate Everything with Terraform](#3-automate-everything-with-terraform)
-4. [Project 4: Containerize and Orchestrate](#4-containerize-and-orchestrate)
-5. [Project 5: Provision an EKS Cluster with Custom Modules](#5-provision-an-eks-cluster-with-custom-modules)
-6. [Project 6: Implement GitOps on EKS with ArgoCD](#6-implement-gitops-on-eks-with-argocd)
-7. [Project 7: Centralized Logging & Monitoring](#7-centralized-logging--monitoring)
-8. [Project 8: Secure Your Infrastructure](#8-secure-your-infrastructure)
-9. [Project 9: Build an Event-Driven Architecture](#9-build-an-event-driven-architecture)
-10. [Project 10: Multi-Region Disaster Recovery Strategy](#10-multi-region-disaster-recovery-strategy)
+1. [Project 1: Multi-Cloud Static Website](#1-multi-cloud-static-website)
+2. [Project 2: Cloud-Native 3-Tier Web Application](#2-cloud-native-3-tier-web-application)
+3. [Project 3: Infrastructure as Code Across Clouds](#3-infrastructure-as-code-across-clouds)
+4. [Project 4: Multi-Cloud Container Orchestration](#4-multi-cloud-container-orchestration)
+5. [Project 5: Managed Kubernetes Across Cloud Providers](#5-managed-kubernetes-across-cloud-providers)
+6. [Project 6: GitOps Implementation on Kubernetes](#6-gitops-implementation-on-kubernetes)
+7. [Project 7: Multi-Cloud Observability Stack](#7-multi-cloud-observability-stack)
+8. [Project 8: Cloud Security Best Practices](#8-cloud-security-best-practices)
+9. [Project 9: Event-Driven Serverless Architecture](#9-event-driven-serverless-architecture)
+10. [Project 10: Multi-Cloud Disaster Recovery](#10-multi-cloud-disaster-recovery)
 
 ---
 
-## 1️⃣ Serverless Static Website
+## 1️⃣ Multi-Cloud Static Website
 
 ### 🎯 Objective
-Host a static website globally using **AWS S3** and **CloudFront**, secured with HTTPS.
+Host a static website globally across multiple cloud providers with CDN, secured with HTTPS.
 
 ### 🧱 Architecture
-- Amazon S3 → Static Website Hosting  
-- CloudFront → CDN for global low-latency delivery  
-- AWS Certificate Manager → Free SSL/TLS  
-- Route 53 → Custom Domain  
-- GitHub Actions / CodePipeline → CI/CD Deployment  
+**AWS**: S3 + CloudFront + ACM + Route 53  
+**GCP**: Cloud Storage + Cloud CDN + Cloud DNS + SSL Certificates  
+**Azure**: Storage Account + Azure CDN + Azure DNS + App Service Certificates  
 
 ### 💡 App Idea
-Personal Portfolio or Tech Blog  
+Personal Portfolio or Tech Blog with multi-cloud deployment  
 
 ### 🗺️ Diagram
 ```plaintext
-[GitHub] → [S3 Bucket] → [CloudFront] → [User]
-                   ↳ [ACM HTTPS]
-````
-
----
-
-## 2️⃣ The Classic 3-Tier Web Application
-
-### 🎯 Objective
-
-Build a scalable **Web**, **App**, and **Database** tier app using core AWS compute and networking services.
-
-### 🧱 Architecture
-
-* VPC + Public & Private Subnets
-* EC2 Instances (Web/App Tier)
-* Application Load Balancer (ALB)
-* Auto Scaling Groups
-* RDS (MySQL/PostgreSQL)
-
-### 💡 App Idea
-
-To-Do App or E-Commerce Web App
-
-### 🗺️ Diagram
-
-```plaintext
-[User] → [ALB] → [App EC2] → [RDS Database]
+[GitHub] → [Cloud Storage] → [CDN] → [User]
+                      ↳ [SSL/TLS Certificate]
 ```
 
 ---
 
-## 3️⃣ Automate Everything with Terraform
+## 2️⃣ Cloud-Native 3-Tier Web Application
 
 ### 🎯 Objective
-
-Recreate your entire 3-tier architecture using **Infrastructure as Code (IaC)**.
+Build a scalable **Web**, **App**, and **Database** tier application using cloud-native compute and networking services.
 
 ### 🧱 Architecture
-
-* Terraform for provisioning
-* AWS Provider Configuration
-* Remote Backend (S3 + DynamoDB for state)
+**AWS**: VPC + EC2 + ALB + Auto Scaling + RDS  
+**GCP**: VPC + Compute Engine + Cloud Load Balancing + Instance Groups + Cloud SQL  
+**Azure**: VNet + Virtual Machines + Application Gateway + VM Scale Sets + Azure Database  
 
 ### 💡 App Idea
-
-Automate Project #2 deployment
+To-Do App or E-Commerce Web App deployed across clouds
 
 ### 🗺️ Diagram
-
 ```plaintext
-[Terraform Code] → [AWS Infrastructure]
+[User] → [Load Balancer] → [App Instances] → [Managed Database]
 ```
 
 ---
 
-## 4️⃣ Containerize and Orchestrate
+## 3️⃣ Infrastructure as Code Across Clouds
 
 ### 🎯 Objective
-
-Dockerize an application and deploy it on **ECS with Fargate (serverless containers)**.
+Recreate your entire 3-tier architecture using **Infrastructure as Code (IaC)** across multiple cloud providers.
 
 ### 🧱 Architecture
-
-* Docker → Containerize the app
-* ECR → Store container images
-* ECS + Fargate → Deploy containers
-* ALB → Distribute traffic
+**AWS**: Terraform AWS Provider + S3 Backend + DynamoDB State Lock  
+**GCP**: Terraform Google Provider + Cloud Storage Backend + Cloud Firestore State Lock  
+**Azure**: Terraform AzureRM Provider + Storage Account Backend + Cosmos DB State Lock  
 
 ### 💡 App Idea
-
-Flask or Node.js REST API
+Automate Project #2 deployment across all three cloud providers
 
 ### 🗺️ Diagram
-
 ```plaintext
-[User] → [ALB] → [ECS (Fargate Tasks)] → [ECR]
+[Terraform Code] → [Multi-Cloud Infrastructure]
 ```
 
 ---
 
-## 5️⃣ Provision an EKS Cluster with Custom Modules
+## 4️⃣ Multi-Cloud Container Orchestration
 
 ### 🎯 Objective
-
-Deploy a **production-ready Kubernetes cluster** using **custom Terraform modules**.
+Dockerize an application and deploy it using serverless container services across cloud providers.
 
 ### 🧱 Architecture
-
-* EKS Cluster (Control Plane + Nodes)
-* Terraform Custom Modules for EKS, VPC, IAM
-* Worker Node Groups and Role Mappings
+**AWS**: Docker + ECR + ECS Fargate + ALB  
+**GCP**: Docker + Container Registry + Cloud Run + Cloud Load Balancing  
+**Azure**: Docker + Container Registry + Container Instances + Application Gateway  
 
 ### 💡 App Idea
+Flask or Node.js REST API deployed across cloud container services
 
-Bookstore API or Microservices Demo
-
-### 🗺️ Diagram
-
+### �️ Diagdram
 ```plaintext
-[Terraform Modules] → [EKS Cluster] → [Worker Nodes]
+[User] → [Load Balancer] → [Serverless Containers] → [Container Registry]
 ```
 
 ---
 
-## 6️⃣ Implement GitOps on EKS with ArgoCD
+## 5️⃣ Managed Kubernetes Across Cloud Providers
 
 ### 🎯 Objective
-
-Automate deployments to Kubernetes with **GitOps** using **ArgoCD**.
+Deploy **production-ready Kubernetes clusters** using **custom Terraform modules** across cloud providers.
 
 ### 🧱 Architecture
-
-* ArgoCD → Installed on EKS
-* GitHub Repo → Source of Truth
-* Helm Charts / Kustomize for manifests
+**AWS**: EKS + Custom Terraform Modules + VPC + IAM  
+**GCP**: GKE + Custom Terraform Modules + VPC + IAM  
+**Azure**: AKS + Custom Terraform Modules + VNet + Azure AD  
 
 ### 💡 App Idea
-
-Auto-deployed microservice updated via Git commits
+Bookstore API or Microservices Demo on multi-cloud Kubernetes
 
 ### 🗺️ Diagram
-
 ```plaintext
-[Git Repo] → [ArgoCD] → [EKS Namespace] → [Pods]
+[Terraform Modules] → [Managed K8s Cluster] → [Worker Nodes]
 ```
 
 ---
 
-## 7️⃣ Centralized Logging & Monitoring
+## 6️⃣ GitOps Implementation on Kubernetes
 
 ### 🎯 Objective
-
-Implement observability for your EC2 and EKS workloads.
+Automate deployments to Kubernetes clusters with **GitOps** using **ArgoCD** across cloud providers.
 
 ### 🧱 Architecture
-
-* CloudWatch → Logs and Metrics
-* OpenSearch → Log Analytics
-* Managed Grafana → Dashboards
+**AWS**: ArgoCD on EKS + GitHub + Helm/Kustomize  
+**GCP**: ArgoCD on GKE + GitHub + Helm/Kustomize  
+**Azure**: ArgoCD on AKS + GitHub + Helm/Kustomize  
 
 ### 💡 App Idea
-
-Visualize metrics and logs for Projects #2–#6
+Auto-deployed microservice updated via Git commits across cloud K8s clusters
 
 ### 🗺️ Diagram
-
 ```plaintext
-[App] → [CloudWatch Logs] → [OpenSearch] → [Grafana]
+[Git Repo] → [ArgoCD] → [K8s Namespace] → [Pods]
 ```
 
 ---
 
-## 8️⃣ Secure Your Infrastructure
+## 7️⃣ Multi-Cloud Observability Stack
 
 ### 🎯 Objective
-
-Apply **AWS Security Best Practices** for identity, access, and network layers.
+Implement comprehensive observability for your multi-cloud workloads and Kubernetes clusters.
 
 ### 🧱 Architecture
-
-* IAM Roles & Policies (no static keys)
-* AWS Secrets Manager → Secure credentials
-* Security Groups & NACLs → Network protection
-* AWS Config → Continuous compliance
+**AWS**: CloudWatch + OpenSearch + Managed Grafana  
+**GCP**: Cloud Logging + Cloud Monitoring + Grafana  
+**Azure**: Azure Monitor + Log Analytics + Grafana  
+**Cross-Cloud**: Prometheus + Grafana + ELK Stack  
 
 ### 💡 App Idea
-
-Secure any of your previous app deployments
+Unified observability dashboard for Projects #2–#6 across all clouds
 
 ### 🗺️ Diagram
-
 ```plaintext
-[User/Service] → [IAM Role] → [AWS Resource]
+[Multi-Cloud Apps] → [Centralized Logging] → [Unified Dashboard]
 ```
 
 ---
 
-## 9️⃣ Build an Event-Driven Architecture
+## 8️⃣ Cloud Security Best Practices
 
 ### 🎯 Objective
-
-Create a **serverless image processing pipeline** triggered by S3 uploads.
+Apply **Cloud Security Best Practices** for identity, access, and network layers across all cloud providers.
 
 ### 🧱 Architecture
-
-* S3 → Trigger for file upload
-* Lambda → Image processing logic
-* SNS/SQS → Notification or Queue decoupling
-* Output → Processed S3 Bucket
+**AWS**: IAM + Secrets Manager + Security Groups + AWS Config  
+**GCP**: Cloud IAM + Secret Manager + VPC Firewall + Security Command Center  
+**Azure**: Azure AD + Key Vault + Network Security Groups + Security Center  
 
 ### 💡 App Idea
+Secure any of your previous app deployments across all cloud providers
 
-Serverless image thumbnail generator
-
-### 🗺️ Diagram
-
+### �️A Diagram
 ```plaintext
-[S3 Upload] → [Lambda] → [Processed S3 Bucket]
-                     ↳ [SNS Notification]
+[User/Service] → [Cloud Identity] → [Secured Cloud Resource]
 ```
 
 ---
 
-## 🔟 Multi-Region Disaster Recovery Strategy
+## 9️⃣ Event-Driven Serverless Architecture
 
 ### 🎯 Objective
-
-Design a **highly available system** across multiple AWS regions.
+Create **serverless image processing pipelines** triggered by cloud storage uploads across providers.
 
 ### 🧱 Architecture
-
-* RDS Cross-Region Replication
-* Route 53 → Failover Routing Policy
-* S3 → Cross-Region Replication (CRR)
-* Backup Automation Scripts
+**AWS**: S3 + Lambda + SNS/SQS + S3 Output  
+**GCP**: Cloud Storage + Cloud Functions + Pub/Sub + Cloud Storage Output  
+**Azure**: Blob Storage + Azure Functions + Service Bus + Blob Storage Output  
 
 ### 💡 App Idea
+Multi-cloud serverless image thumbnail generator
 
-Disaster recovery setup for your 3-tier app
+### �️ Diagraam
+```plaintext
+[Storage Upload] → [Serverless Function] → [Processed Storage]
+                              ↳ [Message Queue]
+```
+
+---
+
+## 🔟 Multi-Cloud Disaster Recovery
+
+### 🎯 Objective
+Design **highly available systems** with disaster recovery across multiple cloud providers and regions.
+
+### 🧱 Architecture
+**AWS**: Multi-Region RDS + Route 53 + S3 CRR  
+**GCP**: Multi-Region Cloud SQL + Cloud DNS + Storage Transfer  
+**Azure**: Multi-Region Azure Database + Traffic Manager + Storage Replication  
+**Cross-Cloud**: Database replication + DNS failover between cloud providers  
+
+### 💡 App Idea
+Ultimate disaster recovery setup spanning multiple clouds and regions
 
 ### 🗺️ Diagram
-
 ```plaintext
-[Region A (Primary)] ⇄ [Region B (Secondary)]
-           ↑                    ↑
-      [Route 53 Failover]    [RDS Replica]
+[Cloud A Primary] ⇄ [Cloud B Secondary] ⇄ [Cloud C Tertiary]
+        ↑                    ↑                    ↑
+   [DNS Failover]      [Data Sync]        [Backup Site]
 ```
 
 ---
 
 ## 🧠 Skills Gained
 
-* AWS Core Services (EC2, S3, RDS, ECS, EKS, Lambda, etc.)
-* Terraform & Infrastructure as Code
-* CI/CD Automation (GitHub Actions, CodePipeline)
-* Docker & Containerization
-* GitOps with ArgoCD
-* Cloud Security & IAM
-* Observability (CloudWatch, Grafana, OpenSearch)
-* High Availability & Disaster Recovery
+* **Multi-Cloud Expertise**: AWS, Google Cloud Platform, Microsoft Azure
+* **Core Cloud Services**: Compute, Storage, Database, Networking across all providers
+* **Infrastructure as Code**: Terraform with multi-cloud providers
+* **CI/CD Automation**: GitHub Actions, Cloud-native CI/CD pipelines
+* **Containerization**: Docker, Kubernetes (EKS, GKE, AKS)
+* **GitOps**: ArgoCD implementation across cloud providers
+* **Cloud Security**: IAM, Identity management, Network security across clouds
+* **Observability**: Multi-cloud monitoring, logging, and alerting
+* **High Availability**: Multi-cloud disaster recovery and failover strategies
+* **Cost Optimization**: Cloud resource management across providers
 
 ---
 
 ## 🧩 Repository Structure
 
 ```plaintext
-📦 aws-devops-projects/
- ┣ 📁 project-1-serverless-static-site/
- ┣ 📁 project-2-3tier-app/
- ┣ 📁 project-3-terraform-iac/
- ┣ 📁 project-4-ecs-fargate/
- ┣ 📁 project-5-eks-cluster/
- ┣ 📁 project-6-argocd-gitops/
- ┣ 📁 project-7-logging-monitoring/
- ┣ 📁 project-8-security-best-practices/
- ┣ 📁 project-9-event-driven-lambda/
- ┗ 📁 project-10-dr-multiregion/
+📦 multi-cloud-devops-projects/
+ ┣ 📁 01-multi-cloud-static-website/
+ ┃ ┣ 📁 aws/
+ ┃ ┣ 📁 gcp/
+ ┃ ┗ 📁 azure/
+ ┣ 📁 02-cloud-native-3tier-app/
+ ┃ ┣ 📁 aws/
+ ┃ ┣ 📁 gcp/
+ ┃ ┗ 📁 azure/
+ ┣ 📁 03-infrastructure-as-code/
+ ┃ ┣ 📁 aws/
+ ┃ ┣ 📁 gcp/
+ ┃ ┗ 📁 azure/
+ ┣ 📁 04-multi-cloud-containers/
+ ┃ ┣ 📁 aws/
+ ┃ ┣ 📁 gcp/
+ ┃ ┗ 📁 azure/
+ ┣ 📁 05-managed-kubernetes/
+ ┃ ┣ 📁 aws-eks/
+ ┃ ┣ 📁 gcp-gke/
+ ┃ ┗ 📁 azure-aks/
+ ┣ 📁 06-gitops-kubernetes/
+ ┣ 📁 07-multi-cloud-observability/
+ ┣ 📁 08-cloud-security-practices/
+ ┣ 📁 09-event-driven-serverless/
+ ┗ 📁 10-multi-cloud-disaster-recovery/
 ```
 
 ---
 
 ## 🛠️ Prerequisites
 
-* AWS Free Tier Account
-* Terraform Installed
-* Docker Installed
-* kubectl Configured
-* GitHub Actions Enabled
+* **Cloud Accounts**: AWS Free Tier, GCP Free Tier, Azure Free Account
+* **Tools**: Terraform, Docker, kubectl, Helm
+* **CLI Tools**: AWS CLI, gcloud CLI, Azure CLI
+* **Version Control**: Git, GitHub account
+* **CI/CD**: GitHub Actions enabled
+* **Optional**: Visual Studio Code with cloud extensions
 
 ---
 
@@ -329,7 +305,7 @@ Disaster recovery setup for your 3-tier app
 ## 🌐 Author
 
 **Ashvit K.**
-Cloud & DevOps Engineer | Automation & Security Enthusiast
+Multi-Cloud & DevOps Engineer | AWS | GCP | Azure | Automation & Security Enthusiast
 
 📧 [LinkedIn](https://www.linkedin.com/in/opswork/)
 🌎 Portfolio – Coming Soon
