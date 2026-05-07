@@ -1,0 +1,18 @@
+apiVersion: v2
+name: bookstore
+description: A Helm chart for Bookstore API microservice
+type: application
+version: 0.1.0
+appVersion: "1.0.0"
+keywords:
+  - bookstore
+  - api
+  - microservice
+  - nodejs
+home: https://github.com/your-username/bookstore-api
+sources:
+  - https://github.com/your-username/bookstore-api
+maintainers:
+  - name: Ashvit K.
+    email: your-email@example.com
+dependencies: []
